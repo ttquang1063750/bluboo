@@ -1,7 +1,8 @@
-*{
-  box-sizing: border-box;
-}
+@import "normalize";
+@import "base";
+@import "stacked";
+@import "button";
 
-body{
-  background: $base_color;
-}
+
+//components
+@import "../app/components/header/header";

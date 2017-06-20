@@ -1,1 +1,11 @@
-$base_color:#fafafa;
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background: #fafafa;
+}
+
+.wrapper{
+  padding: 35px 0;
+}
