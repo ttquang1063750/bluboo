@@ -1,0 +1,9 @@
+/* styles in src/style directory are applied to the whole page */
+@import "normalize";
+@import "base";
+@import "button";
+@import "layout";
+
+
+//components
+@import "../app/components/header/header";
