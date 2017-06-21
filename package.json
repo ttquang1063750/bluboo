@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "bluboo smartphone",
   "scripts": {
+    "prepare":"npm install",
     "build": "rimraf dist && webpack --bail --progress --profile",
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
     "start": "npm run server"

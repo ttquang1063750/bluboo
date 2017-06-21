@@ -1,6 +1,31 @@
-routing.$inject = ['$urlRouterProvider', '$locationProvider'];
+routing.$inject = ['$urlRouterProvider', '$locationProvider', '$stateProvider'];
+export default function routing($urlRouterProvider, $locationProvider, $stateProvider) {
 
-export default function routing($urlRouterProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/home');
+
+  $stateProvider
+      .state('app', {
+        abstract: true,
+        url: '',
+        views: {
+          "header@app": {
+            component: 'headerComponent'
+          },
+          "content@": {
+            template: require('./app.index.html')
+          },
+          "footer@app": {
+            component: 'footerComponent'
+          },
+        }
+      })
+      .state('app.home', {
+        url: '/home',
+        views: {
+          "wrapper@app":{
+            component: 'homeComponent'
+          }
+        }
+      })
 }

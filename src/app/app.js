@@ -2,11 +2,22 @@ import 'bootstrap/dist/css/bootstrap.css';
 import '../style/app.scss';
 
 import angular from 'angular';
-import uirouter from 'angular-ui-router';
+import uirouter from '@uirouter/angularjs';
 
 import routing from './app.config';
-import home from './features/home';
+import headerComponent  from './components/header';
+import footerComponent  from './components/footer';
+import homeComponent  from './components/home';
+
+let components = [
+  headerComponent,
+  footerComponent,
+  homeComponent
+];
 
 angular
-    .module('app', [uirouter, home])
+    .module('app', [
+      uirouter,
+      ...components
+    ])
     .config(routing);
