@@ -48,6 +48,10 @@ home-component{
           font-size: 3rem;
           color: $base-color;
           margin-bottom: 10px;
+
+          .unit{
+            color: $base-color;
+          }
         }
       }
 

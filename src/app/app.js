@@ -1,4 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
+import 'wowjs/css/libs/animate.css';
+import 'slick-carousel/slick/slick.scss';
 import '../style/app.scss';
 
 import angular from 'angular';
@@ -13,6 +15,11 @@ import homeComponent  from './components/home';
 import productsComponent  from './components/products';
 import productDetailComponent  from './components/product-detail';
 
+
+// Services
+import ProductService from './services/product.service';
+
+
 let components = [
   headerComponent,
   footerComponent,
@@ -23,9 +30,15 @@ let components = [
   productDetailComponent
 ];
 
+
+let services = [
+  ProductService
+];
+
 angular
     .module('app', [
       uirouter,
-      ...components
+      ...components,
+      ...services
     ])
     .config(routing);
