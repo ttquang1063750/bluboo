@@ -1,9 +1,8 @@
 @import "normalize";
 @import "base";
-@import "stacked";
 @import "button";
 
 
 //components
-@import "../app/components/header/header";
-@import "../app/components/footer/footer";
+@import "../app/components/header/index";
+@import "../app/components/footer/index";

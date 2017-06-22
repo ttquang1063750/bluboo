@@ -23,7 +23,7 @@ export default function routing($urlRouterProvider, $locationProvider, $statePro
       .state('app.home', {
         url: '/home',
         views: {
-          "wrapper@app":{
+          "content@app":{
             component: 'homeComponent'
           }
         }

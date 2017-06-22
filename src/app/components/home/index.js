@@ -1,12 +1,20 @@
 import angular from 'angular';
-import HomeController from './home.controller';
 
-let homeComponent = {
-  template: require("./home.html"),
-  controller: HomeController,
-  controllerAs:"$ctrl"
-};
+
+class HomeController {
+  constructor() {
+    this.name = 'World';
+  }
+
+  changeName() {
+    this.name = 'angular-tips';
+  }
+}
 
 export default angular.module('component.home', [])
-    .component('homeComponent', HomeController)
+    .component('homeComponent', {
+      template: require("./index.html"),
+      controller: HomeController,
+      controllerAs:"$ctrl"
+    })
     .name;
