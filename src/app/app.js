@@ -1,12 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'wowjs/css/libs/animate.css';
 import 'slick-carousel/slick/slick.scss';
+import 'fullpage.js/dist/jquery.fullpage.min.css';
 import '../style/app.scss';
 
 import angular from 'angular';
 import uirouter from '@uirouter/angularjs';
 import {WOW} from 'wowjs';
-
 
 //Configs
 import routing from './app.config';
@@ -43,8 +43,10 @@ let services = [
 
 //Directive
 import fullpage from './directives/fullpage.directive';
+import fixedHeader from './directives/fixed.header.directive';
 let directives = [
-  fullpage
+  fullpage,
+  fixedHeader
 ];
 
 angular

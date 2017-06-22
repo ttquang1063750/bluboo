@@ -4,9 +4,9 @@
   "description": "bluboo smartphone",
   "scripts": {
     "prepare": "npm install",
-    "build": "rimraf dist && webpack --bail --progress --profile",
+    "build": "npm run prepare && rimraf dist && webpack --bail --progress --profile",
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
-    "start": "npm run server"
+    "start": "npm run prepare && npm run server"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0",

@@ -31,6 +31,9 @@ a:hover, a, a:focus {
 
 .wrapper{
   padding:0 0 $base-space;
+  &.has-header{
+    padding-top: 170px;
+  }
 }
 
 .wrapper-content{
@@ -47,4 +50,10 @@ a:hover, a, a:focus {
   top: -13px;
   font-size: 1.2rem;
   text-transform: uppercase;
+}
+
+.fixed-to-top{
+  header-component{
+    background: rgba(0,0,0,0.7);
+  }
 }
