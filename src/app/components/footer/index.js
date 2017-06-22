@@ -1,12 +1,17 @@
 import angular from 'angular';
-import FooterController from './footer.controller';
 
-let footerComponent = {
-  template: require("./footer.html"),
-  controller: FooterController,
-  controllerAs:"$ctrl"
-};
+
+class FooterController {
+  constructor() {}
+}
+
+FooterController.$inject = [];
+
 
 export default angular.module('component.footer', [])
-    .component('footerComponent', footerComponent)
+    .component('footerComponent', {
+      template: require("./index.html"),
+      controller: FooterController,
+      controllerAs:"$ctrl"
+    })
     .name;

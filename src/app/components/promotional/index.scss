@@ -1,0 +1,27 @@
+promotional-component {
+  display: flex; //Default
+  justify-content: space-around;
+  flex-direction: row;
+  border:1px solid $base-color;
+
+  > *{
+    margin: 2em 4vw;
+  }
+
+  .promotional-group {
+    max-width: 90px;
+
+    .title{
+      text-transform: uppercase;
+      color: $base-color;
+      font-size: 1.4rem;
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
+
+  .line {
+    width: 1px;
+    background-color: $base-color;
+  }
+}

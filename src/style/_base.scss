@@ -1,15 +1,50 @@
-*{
-  box-sizing: border-box;
-  color: #ffffff;
+html {
+  font-size: 62.5%;
 }
 
-html{
-  font-size: 16px;
-}
 body{
   background: url("/img/bg.png") center center transparent scroll no-repeat;
+  font-size: 1.4rem;
+
+  *{
+    box-sizing: border-box;
+    color: $light-color;
+  }
+}
+
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a:hover, a, a:focus {
+  text-decoration: none;
 }
 
 .wrapper{
-  padding: 35px 0;
+  padding:0 0 $base-space;
+}
+
+.wrapper-content{
+  padding: $base-space;
+}
+
+.content{
+  width: 100vw;
+  height: 100vh;
+}
+
+.unit{
+  position: relative;
+  top: -13px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }

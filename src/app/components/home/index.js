@@ -1,12 +1,25 @@
 import angular from 'angular';
-import HomeController from './home.controller';
 
-let homeComponent = {
-  template: require("./home.html"),
-  controller: HomeController,
-  controllerAs:"$ctrl"
-};
+
+class HomeController {
+  constructor(ProductService) {
+    this.products = ProductService.products;
+
+    this.productSale = this.products[0];
+  }
+
+
+  selectPromotionProduct(product){
+    this.productSale = product;
+  }
+}
+
+HomeController.$inject = ['ProductService'];
 
 export default angular.module('component.home', [])
-    .component('homeComponent', HomeController)
+    .component('homeComponent', {
+      template: require("./index.html"),
+      controller: HomeController,
+      controllerAs:"$ctrl"
+    })
     .name;
