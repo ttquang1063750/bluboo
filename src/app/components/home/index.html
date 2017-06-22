@@ -10,7 +10,7 @@
           {{::product.name}}
         </p>
         <p class="price">
-          chỉ {{::product.price}} <span class="unit">vnd</span>
+          chỉ {{::product.price | currency: ""}} <span class="unit">vnd</span>
         </p>
         <button class="btn-base btn-outline btn-more-products" ui-sref="app.products.detail({id: product.id})">mua ngay</button>
       </div>

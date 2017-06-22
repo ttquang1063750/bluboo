@@ -14,12 +14,12 @@
         </p>
 
         <div class="chose-color">
-          màu sắc: <span class="color" ng-style="{'background': color.color}" ng-repeat="color in $ctrl.product.colors"></span>
+          màu sắc: <span class="color" ng-style="{'background': color.color}" ng-repeat="color in $ctrl.product.colors" ng-click="$ctrl.changeColor(color)"></span>
         </div>
 
         <div class="price">
             <div class="number">
-              {{::$ctrl.product.price}} <span class="unit">vnd</span>
+              {{::$ctrl.product.price | currency: ""}} <span class="unit">vnd</span>
             </div>
           <div class="select-product">
             <input type="number" placeholder="số lượng">
@@ -30,19 +30,19 @@
         <div class="buy-product">
           <a class="btn-buy" ng-click="$ctrl.buyProduct()">mua ngay</a>
           <a href="#" class="cart">
-            <img class="icon" src="/img/icon_cart.png" alt="cart">
+            <img class="icon" src="/img/icon_cart_black.png" alt="cart">
             <span class="badge">1</span>
           </a>
         </div>
 
         <div class="options">
           <a href="#">
-            <img class="icon" src="/img/icon_amortize.png" alt="cart">
+            <img class="icon" src="/img/icon_amortize.png" alt="trả góp">
             <span>trả góp</span>
           </a>
 
           <a href="#">
-            <img class="icon" src="/img/icon_share.png" alt="cart">
+            <img class="icon" src="/img/icon_share.png" alt="chia sẻ cho bạn bè">
             <span>chia sẻ cho bạn bè</span>
           </a>
         </div>

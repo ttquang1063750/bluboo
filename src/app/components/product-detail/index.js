@@ -12,6 +12,10 @@ class ProductDetailController {
   rating(start){
     this.product.start = start;
   }
+
+  changeColor(color){
+    console.log(color);
+  }
 }
 
 
