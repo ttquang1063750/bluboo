@@ -13,6 +13,11 @@ class HomeController {
 
     this.productSale = this.products[0];
   }
+
+
+  selectPromotionProduct(product){
+    this.productSale = product;
+  }
 }
 
 export default angular.module('component.home', [])

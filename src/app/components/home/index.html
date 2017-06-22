@@ -2,17 +2,17 @@
   <div class="text-center">
     <button class="btn-base btn-outline btn-more-products" ui-sref="app.products">sản phẩm</button>
   </div>
-  <div class="product-group">
+  <div class="products">
     <div class="product" ng-repeat="product in $ctrl.products">
       <img ng-src="{{::product.url}}" alt="" class="banner">
-      <div class="product-info">
+      <div class="info">
         <p class="name">
           {{::product.name}}
         </p>
         <p class="price">
-          chỉ {{::product.price}} VNĐ
+          chỉ {{::product.price}} <span class="unit">VNĐ</span>
         </p>
-        <button class="btn-base btn-outline" ui-sref="app.products.detail({id: product.id})">mua ngay</button>
+        <button class="btn-base btn-outline btn-more-products" ui-sref="app.products.detail({id: product.id})">mua ngay</button>
       </div>
     </div>
   </div>
@@ -27,11 +27,17 @@
   <div class="text-center">
     <button class="btn-base btn-outline btn-more-products" ui-sref="app.products">khuyến mãi</button>
   </div>
-  <div class="product-sale">
-    <div class="banner-product">
+  <div class="product-promotion">
+    <div class="wrapper-banner">
       <img ng-src="{{::$ctrl.productSale.banner}}" alt="" class="banner">
-      <div class="product-info">
-        <button class="btn-base btn-outline" ui-sref="app.products.detail({id: $ctrl.productSale.id})">xem chi tiết</button>
+      <div class="info">
+        <button class="btn-base btn-outline btn-more-products" ui-sref="app.products.detail({id: $ctrl.productSale.id})">xem chi tiết</button>
+      </div>
+    </div>
+
+    <div class="products-control">
+      <div class="product" ng-repeat="product in $ctrl.products" ng-click="$ctrl.selectPromotionProduct(product)">
+        <img ng-src="{{::product.url}}" alt="" class="banner">
       </div>
     </div>
   </div>

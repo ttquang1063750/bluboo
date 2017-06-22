@@ -1,12 +1,6 @@
 home-component{
 
-  .btn-more-products{
-    margin: 0 0 20px;
-    width: 150px;
-    height:40px;
-  }
-
-  .product-group{
+  .products{
     display: flex; //Default
     flex-flow: row wrap;
     justify-content: space-around;
@@ -30,7 +24,7 @@ home-component{
         margin-right: auto;
       }
 
-      .product-info{
+      .info{
         position: absolute;
         top:100%;
         left: 0;
@@ -58,7 +52,7 @@ home-component{
       }
 
       &:hover{
-        .product-info{
+        .info{
           opacity: 1;
           top:0;
         }
@@ -67,8 +61,8 @@ home-component{
   }
 
 
-  .product-sale{
-    .banner-product{
+  .product-promotion{
+    .wrapper-banner{
       position: relative;
       width:100%;
       padding: 10px;
@@ -80,7 +74,7 @@ home-component{
         display: block;
       }
 
-      .product-info{
+      .info{
         position: absolute;
         top:100%;
         left: 0;
@@ -96,10 +90,25 @@ home-component{
       }
 
       &:hover{
-        .product-info{
+        .info{
           opacity: 1;
           top:0;
         }
+      }
+    }
+
+    .products-control{
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .product{
+        border: 1px solid $base-color;
+        flex: 1 0 30%;
+        padding: 10px;
+        margin: 20px 5% 20px 0;
       }
     }
   }
