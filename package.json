@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "bluboo smartphone",
   "scripts": {
-    "prepare":"npm install",
+    "prepare": "npm install",
     "build": "rimraf dist && webpack --bail --progress --profile",
     "server": "webpack-dev-server --history-api-fallback --inline --progress",
     "start": "npm run server"
@@ -44,6 +44,7 @@
     "@uirouter/angularjs": "^1.0.4",
     "angular": "^1.6.4",
     "bootstrap": "^3.3.7",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "wowjs": "^1.1.3"
   }
 }

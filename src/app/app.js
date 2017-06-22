@@ -7,12 +7,20 @@ import uirouter from '@uirouter/angularjs';
 import routing from './app.config';
 import headerComponent  from './components/header';
 import footerComponent  from './components/footer';
+import PromotionalComponent from './components/promotional';
+import SupportComponent from './components/support';
 import homeComponent  from './components/home';
+import productsComponent  from './components/products';
+import productDetailComponent  from './components/product-detail';
 
 let components = [
   headerComponent,
   footerComponent,
-  homeComponent
+  PromotionalComponent,
+  SupportComponent,
+  homeComponent,
+  productsComponent,
+  productDetailComponent
 ];
 
 angular

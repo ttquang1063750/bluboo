@@ -1,3 +1,67 @@
 footer-component{
+  display: flex; //Default
+  flex-direction: column; //Default
+  justify-content: center;
+  align-items: center;
 
+
+  &:before{
+    content: " ";
+    height: 1px;
+    width: 100%;
+    background-color: $base-color;
+  }
+  > *{
+    color: $base-color;
+    margin: 10px auto;
+  }
+
+  .follow-us{
+    padding-top: $base-space/3;
+    font-size: 1.3rem;
+  }
+
+  .social-buttons{
+    display: flex; //Default
+    flex-direction: row; //Default
+    justify-content: center;
+    align-items: center;
+
+    .icon{
+      width: 37px;
+      height: 37px;
+      margin: 0 15px;
+      background: url("/img/icon_social.png") 0 0 scroll no-repeat transparent;
+
+      &.fb{
+        background-position: 0 0;
+      }
+
+      &.instagram{
+        background-position: -37px 0;
+      }
+
+      &.youtube{
+        background-position: -74px 0;
+      }
+
+      &.google-plus{
+        background-position: -111px 0;
+      }
+
+      &.twitter{
+        background-position: -148px 0;
+      }
+    }
+  }
+
+  .aim{
+    text-transform: uppercase;
+    font-size: 1.4rem;
+  }
+
+  .info{
+    font-size: 1.2rem;
+    text-align: center;
+  }
 }

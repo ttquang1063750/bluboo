@@ -1,0 +1,25 @@
+<div class="wrapper-content">
+  <div class="product-group">
+    <div class="product" ng-repeat="product in $ctrl.products">
+      <img ng-src="{{::product.url}}" alt="" class="banner">
+      <div class="info">
+        <p class="name">
+          {{::product.name}}
+        </p>
+        <p class="price">
+          chỉ {{::product.price}} VNĐ
+        </p>
+        <button class="btn-base btn-outline btn-submit" >mua ngay</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrapper-content">
+  <promotional-component></promotional-component>
+</div>
+<div class="wrapper-content">
+
+</div>
+<div class="wrapper-content">
+  <support-component></support-component>
+</div>

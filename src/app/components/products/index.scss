@@ -1,0 +1,27 @@
+products-component{
+
+
+  .product-group{
+    display: flex; //Default
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    .product{
+      flex: 0 1 48%;
+      padding: 10px;
+      margin: 20px 1%;
+      border: 1px solid $base-color;
+
+      .banner{
+        width:100%;
+        height: auto;
+        display: block;
+      }
+
+      &:last-child{
+        margin-right: auto;
+      }
+    }
+  }
+}

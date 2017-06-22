@@ -8,16 +8,36 @@ body{
 
   *{
     box-sizing: border-box;
-    color: #ffffff;
+    color: $light-color;
   }
 }
 
-.wrapper{
-  padding: 35px 0;
 
-  .content{
-    padding: 0 35px;
-    width: 100vw;
-    height: 100vh;
-  }
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a:hover, a, a:focus {
+  text-decoration: none;
+}
+
+.wrapper{
+  padding:0 0 $base-space;
+}
+
+.wrapper-content{
+  padding: $base-space;
+}
+
+.content{
+  width: 100vw;
+  height: 100vh;
 }

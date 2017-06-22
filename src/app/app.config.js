@@ -28,4 +28,20 @@ export default function routing($urlRouterProvider, $locationProvider, $statePro
           }
         }
       })
+      .state('app.products', {
+        url: '/products',
+        views: {
+          "content@app":{
+            component: 'productsComponent'
+          }
+        }
+      })
+      .state('app.products.detail', {
+        url: '/products/:id',
+        views: {
+          "content@app":{
+            component: 'productDetailComponent'
+          }
+        }
+      })
 }

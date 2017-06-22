@@ -1,1 +1,43 @@
-home
+<div class="wrapper-content">
+  <div class="text-center">
+    <button class="btn-base btn-outline btn-more-products" ui-sref="app.products">sản phẩm</button>
+  </div>
+  <div class="product-group">
+    <div class="product" ng-repeat="product in $ctrl.products">
+      <img ng-src="{{::product.url}}" alt="" class="banner">
+      <div class="product-info">
+        <p class="name">
+          {{::product.name}}
+        </p>
+        <p class="price">
+          chỉ {{::product.price}} VNĐ
+        </p>
+        <button class="btn-base btn-outline" ui-sref="app.products.detail({id: product.id})">mua ngay</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="wrapper-content">
+  <promotional-component></promotional-component>
+</div>
+
+<div class="wrapper-content">
+  <div class="text-center">
+    <button class="btn-base btn-outline btn-more-products" ui-sref="app.products">khuyến mãi</button>
+  </div>
+  <div class="product-sale">
+    <div class="banner-product">
+      <img ng-src="{{::$ctrl.productSale.banner}}" alt="" class="banner">
+      <div class="product-info">
+        <button class="btn-base btn-outline" ui-sref="app.products.detail({id: $ctrl.productSale.id})">xem chi tiết</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="wrapper-content">
+  <support-component></support-component>
+</div>
