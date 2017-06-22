@@ -239,6 +239,9 @@ module.exports = function makeWebpackConfig() {
         new webpack.ProvidePlugin({
           $: 'jquery',
           jQuery: 'jquery'
+        }),
+        new webpack.ProvidePlugin({
+          _map: ['lodash', 'map']
         })
     )
   }

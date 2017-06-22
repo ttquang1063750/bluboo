@@ -1,9 +1,7 @@
 import angular from 'angular';
-let wow = require('wowjs');
 
 class ProductDetailController {
   constructor($stateParams, ProductService) {
-
     let id = $stateParams.id;
     this.product = ProductService.getProduct(id);
   }

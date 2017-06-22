@@ -1,5 +1,5 @@
 import angular from 'angular';
-let _ = require('lodash');
+import _ from 'lodash';
 
 class ProductService {
   constructor() {

@@ -1,4 +1,4 @@
-<div class="wrapper-content">
+<div class="wrapper-content wow fadeInUp" data-wow-delay=".3s">
   <div class="text-center">
     <button class="btn-base btn-outline btn-more-products" ui-sref="app.products">sản phẩm</button>
   </div>
@@ -19,7 +19,7 @@
 </div>
 
 
-<div class="wrapper-content">
+<div class="wrapper-content wow fadeInUp" data-wow-delay=".3s">
   <promotional-component></promotional-component>
 </div>
 
@@ -27,7 +27,7 @@
   <div class="text-center">
     <button class="btn-base btn-outline btn-more-products" ui-sref="app.products">khuyến mãi</button>
   </div>
-  <div class="product-promotion">
+  <div class="product-promotion wow fadeInUp" data-wow-delay=".3s">
     <div class="wrapper-banner">
       <img ng-src="{{::$ctrl.productSale.banner}}" alt="" class="banner">
       <div class="info">
@@ -35,7 +35,7 @@
       </div>
     </div>
 
-    <div class="products-control">
+    <div class="products-control wow fadeInUp" data-wow-delay=".3s">
       <div class="product" ng-repeat="product in $ctrl.products" ng-click="$ctrl.selectPromotionProduct(product)">
         <img ng-src="{{::product.url}}" alt="" class="banner">
       </div>
@@ -44,6 +44,6 @@
 </div>
 
 
-<div class="wrapper-content">
+<div class="wrapper-content wow fadeInUp" data-wow-delay=".6s">
   <support-component></support-component>
 </div>
