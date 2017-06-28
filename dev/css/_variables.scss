@@ -1,0 +1,38 @@
+/* =Scss Variables
+-------------------------------------------------------------- */
+// fonts
+@font-face {
+  font-family: avenir-lt-std-45-book;
+  src: url(avenir-lt-std-45-book.otf);
+}
+$font-primary: 'avenir-lt-std-45-book', sans-serif;
+$font-heading: 'avenir-lt-std-45-book', sans-serif;
+
+/* Colors */
+$white: rgb(255, 255, 255);
+$color: #898f4b;
+
+$dark-grey: rgb(80, 80, 80);
+$text-grey: rgb(100, 100, 100);
+
+
+
+/* Padding */
+$base-padding: 35px;
+$space-between: 15px;
+
+
+/* Header height*/
+$header-height: 80px;
+$header-shadow: 20px;
+
+
+/* Screen break*/
+$info-screen-pc: "only screen and (min-width :  800px)";
+$info-tablet-big: "only screen and (max-width : 1200px)";
+$info-tab-only: "only screen and (max-width: 1200px) and (min-width: 800px)";
+$info-tablet-2: "only screen and (max-width : 992px)";
+$info-tablet: "only screen and (max-width : 800px)";
+$info-phone: "only screen and (max-width : 767px)";
+$info-phone-4: "only screen and (max-width : 320px)";
+$info-xs: "only screen and (max-width: 1023px)";

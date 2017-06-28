@@ -1,3 +1,12 @@
+/* =Scss Variables
+-------------------------------------------------------------- */
+@font-face {
+  font-family: avenir-lt-std-45-book;
+  src: url(avenir-lt-std-45-book.otf); }
+/* Colors */
+/* Padding */
+/* Header height*/
+/* Screen break*/
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 -------------------------------------------------------------- */
 html, body, div, span, applet, object, iframe,
@@ -43,8 +52,6 @@ table {
 a img {
   border: none; }
 
-/* =Scss Variables
--------------------------------------------------------------- */
 /* =Global
 -------------------------------------------------------------- */
 *,
@@ -52,25 +59,16 @@ a img {
 *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-html {
+  box-sizing: border-box;
   margin: 0;
-  padding: 0;
-  font-size: 100%; }
-
-body {
-  background-color: white;
-  color: #505050;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 300;
-  font-size: 1rem; }
+  padding: 0; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   font-weight: 300; }
 
+/* Links */
 a {
   text-decoration: none;
   color: #898f4b; }
@@ -79,12 +77,15 @@ a:hover {
   color: #595d31;
   opacity: .7; }
 
+/* Image auto scale */
 .img-responsive {
   width: 100%;
   height: auto;
   display: block; }
 
 .btn {
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
   border: none;
   box-shadow: none;
   color: white;
@@ -92,53 +93,131 @@ a:hover {
   text-align: center;
   padding: 10px 25px;
   font-size: 1.15rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: "avenir-lt-std-45-book", sans-serif; }
+  .btn:hover, .btn:focus, .btn:active {
+    border: none; }
   .btn:hover {
     opacity: 0.7; }
+
+/* =Header
+ -------------------------------------------------------------- */
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 35px;
+  z-index: 999;
+  background-color: white; }
+  .page-header:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 20px;
+    overflow: hidden;
+    background-image: -webkit-linear-gradient(bottom, transparent, #888);
+    background-image: linear-gradient(0deg, transparent, #888);
+    opacity: .3; }
+  .page-header #btn-menu {
+    display: none;
+    font-size: 1.5rem;
+    background: transparent;
+    color: #898f4b;
+    line-height: 60px;
+    padding: 0; }
+    @media only screen and (max-width: 1023px) {
+      .page-header #btn-menu {
+        display: inline-block; } }
+  .page-header #btn-menu.active ~ #navigation {
+    display: block; }
+  @media only screen and (max-width: 1023px) {
+    .page-header #navigation {
+      display: none; } }
+  .page-header #navigation .logo {
+    line-height: 60px;
+    font-family: "avenir-lt-std-45-book", sans-serif;
+    color: #898f4b;
+    font-size: 2rem; }
+  .page-header #navigation nav > ul > li {
+    max-width: 80px;
+    margin: 5px; }
+    @media only screen and (max-width: 1023px) {
+      .page-header #navigation nav > ul > li {
+        max-width: 100%;
+        margin: 0;
+        padding: 0; }
+        .page-header #navigation nav > ul > li a {
+          border-top: 1px solid #898f4b;
+          padding: 5px 10px; }
+          .page-header #navigation nav > ul > li a .icon {
+            width: 50px; } }
+    .page-header #navigation nav > ul > li:last-child {
+      margin-right: 0; }
+    .page-header #navigation nav > ul > li a {
+      font-size: 1.8rem; }
+      .page-header #navigation nav > ul > li a .fa-mobile {
+        font-size: 2.5rem; }
+      .page-header #navigation nav > ul > li a .title {
+        font-size: 0.8rem;
+        padding: 5px 0; }
+        .page-header #navigation nav > ul > li a .title.badge {
+          font-weight: bold; }
+  .page-header #navigation nav.user-controls .cart {
+    max-width: 50px;
+    margin: 0;
+    padding: 0; }
+    @media only screen and (max-width: 1023px) {
+      .page-header #navigation nav.user-controls .cart {
+        max-width: 100%; } }
+
+/* =Footer
+-------------------------------------------------------------- */
+footer {
+  padding-top: 35px;
+  border-top: 1px solid #898f4b; }
+  footer a {
+    text-transform: uppercase; }
+  footer .terms > * {
+    border-left: 1px solid #898f4b; }
+    @media only screen and (max-width: 1023px) {
+      footer .terms > * {
+        border-left: none; } }
+
+.product .info > * {
+  margin-bottom: 15px; }
+.product .info .title {
+  font-size: 2.5rem;
+  text-transform: uppercase; }
+.product .info .description {
+  font-size: 1rem; }
+.product .info .price .last-price {
+  font-size: 1.2rem;
+  color: #999;
+  text-decoration: line-through;
+  font-style: italic; }
+.product .info .price .new-price {
+  font-size: 2rem; }
+
+/* =Global
+-------------------------------------------------------------- */
+html {
+  font-size: 16px; }
+
+body {
+  background-color: white;
+  color: #505050;
+  font-family: "avenir-lt-std-45-book", sans-serif;
+  font-size: 1rem; }
 
 /* =Template
 -------------------------------------------------------------- */
 #wrapper {
   width: 100%;
-  padding: 5.5rem 35px 105px;
-  /* =Header
-  -------------------------------------------------------------- */ }
-  #wrapper header {
-    position: fixed;
-    height: 4.25rem;
-    top: 0;
-    right: 35px;
-    left: 35px;
-    z-index: 999;
-    background: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    #wrapper header:after {
-      content: "";
-      position: absolute;
-      display: block;
-      top: 4.25rem;
-      left: 0;
-      right: 0;
-      height: 1.25rem;
-      overflow: hidden;
-      background-image: -webkit-linear-gradient(bottom, transparent, #888);
-      background-image: linear-gradient(0deg, transparent, #888);
-      opacity: .3; }
-    #wrapper header h1#logo {
-      line-height: 5.5rem;
-      font-family: "Oswald", sans-serif;
-      color: #898f4b;
-      font-size: 2rem;
-      font-weight: 400; }
-    #wrapper header nav a {
-      margin: 0 1rem;
-      font-size: 1.5rem; }
-      #wrapper header nav a .title {
-        font-size: 1rem; }
-      #wrapper header nav a:last-child {
-        margin-right: 0; }
+  padding: 80px 35px 105px; }
   #wrapper #main section {
     padding: 0 0 35px; }
     #wrapper #main section.sale .banner {
@@ -172,20 +251,16 @@ a:hover {
       align-items: center; }
       #wrapper #main section.sale .banner-control .sub-control {
         width: 33%; }
-    #wrapper #main section.promotion {
-      display: flex;
-      flex-direction: row;
+    #wrapper #main section.feature {
       padding: 35px 0;
-      align-items: center;
-      justify-content: space-around;
       border-top: 4px double #898f4b;
       border-bottom: 4px double #898f4b;
       margin-bottom: 15px; }
-      #wrapper #main section.promotion .sub-promotion {
+      #wrapper #main section.feature .sub-promotion {
         font-size: 3rem;
         color: #898f4b;
         text-align: center; }
-        #wrapper #main section.promotion .sub-promotion h2 {
+        #wrapper #main section.feature .sub-promotion h2 {
           font-size: 1.5rem;
           margin-top: 15px; }
     #wrapper #main section.form {
@@ -205,50 +280,6 @@ a:hover {
         padding: 10px 12px;
         font-size: 1rem;
         margin-bottom: 15px; }
-    #wrapper #main section.product {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: flex-start; }
-      #wrapper #main section.product > * {
-        flex: 1 1 50%;
-        margin: 2rem; }
-      #wrapper #main section.product:nth-child(2n) > * {
-        order: 2; }
-        #wrapper #main section.product:nth-child(2n) > *:last-child {
-          order: 1; }
-      #wrapper #main section.product .info > * {
-        margin-bottom: 15px; }
-      #wrapper #main section.product .info .title {
-        font-size: 2.5rem;
-        text-transform: uppercase; }
-      #wrapper #main section.product .info .description {
-        font-size: 1rem; }
-      #wrapper #main section.product .info .price .last-price {
-        font-size: 1.2rem;
-        color: #999;
-        text-decoration: line-through;
-        font-style: italic; }
-      #wrapper #main section.product .info .price .new-price {
-        font-size: 2rem; }
-
-/* =Footer
--------------------------------------------------------------- */
-footer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 35px;
-  border-top: 1px solid #898f4b;
-  text-transform: uppercase; }
-  footer .terms {
-    display: flex;
-    flex-direction: row; }
-    footer .terms > * {
-      margin-left: 20px;
-      border-left: 1px solid #898f4b;
-      padding-left: 20px; }
 
 /* =Extras
 -------------------------------------------------------------- */
