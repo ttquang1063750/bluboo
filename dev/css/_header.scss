@@ -1,0 +1,117 @@
+/* =Header
+ -------------------------------------------------------------- */
+.page-header {
+  position: fixed;
+  top: 0;
+  left:0;
+  width:100%;
+  padding: 0 $base-padding;
+  margin: 0 auto;
+  z-index: 999;
+  background-color: $white;
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: $header-shadow;
+    overflow: hidden;
+    background-image: -webkit-linear-gradient(bottom, transparent, #888);
+    background-image: linear-gradient(0deg, transparent, #888);
+    opacity: .3;
+  }
+
+  #btn-menu{
+    display: none;
+    font-size: 1.5rem;
+    background: transparent;
+    color: $color;
+    line-height: $header-height - $header-shadow;
+    padding: 0;
+
+    @media #{$info-xs} {
+      display: inline-block;
+    }
+  }
+
+  #btn-menu.active ~ #navigation{
+    display: block;
+  }
+
+  #navigation{
+
+    @media #{$info-xs} {
+      display: none;
+    }
+
+    .logo {
+      line-height: $header-height - $header-shadow;
+      font-family: $font-heading;
+      color: $color;
+      font-size: 2rem;
+    }
+
+    nav {
+      > ul {
+        > li{
+          max-width: 80px;
+          margin: 5px;
+
+
+          @media #{$info-xs} {
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+
+            a{
+              border-top: 1px solid $color;
+              padding: 5px 10px;
+
+              .icon{
+                width: 50px;
+              }
+            }
+          }
+
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          a {
+            font-size: 1.8rem;
+
+            .fa-mobile{
+              font-size: 2.5rem;
+            }
+
+            .title {
+              font-size: 0.8rem;
+              padding: 5px 0;
+
+              &.badge{
+                font-weight: bold;
+              }
+            }
+
+          }
+        }
+      }
+
+      &.user-controls{
+        .cart{
+          max-width: 50px;
+          margin: 0;
+          padding: 0;
+
+          @media #{$info-xs} {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

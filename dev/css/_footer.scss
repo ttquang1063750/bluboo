@@ -1,0 +1,20 @@
+/* =Footer
+-------------------------------------------------------------- */
+footer {
+  padding-top: $base-padding;
+  border-top: 1px solid $color;
+
+  a{
+    text-transform: uppercase;
+  }
+
+  .terms{
+    > * {
+      border-left: 1px solid $color;
+
+      @media #{$info-xs} {
+        border-left: none;
+      }
+    }
+  }
+}

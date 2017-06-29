@@ -1,12 +1,29 @@
 import angular from 'angular';
-import HeaderController from './header.controller';
 
-let headerComponent = {
-  template: require("./header.html"),
-  controller: HeaderController,
-  controllerAs:"$ctrl"
-};
+
+
+class HeaderController {
+  constructor() {}
+
+  // on init component
+  $onInit(){
+
+  }
+
+  onSelect($event){
+    console.log($event);
+  }
+}
+
+
+// DI
+HeaderController.$inject = [];
+
 
 export default angular.module('component.header', [])
-    .component('headerComponent', headerComponent)
+    .component('headerComponent', {
+      template: require("./index.html"),
+      controller: HeaderController,
+      controllerAs:"$ctrl"
+    })
     .name;

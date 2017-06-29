@@ -1,0 +1,76 @@
+header-component{
+  display: flex; //Default
+  flex-direction: column; //Default
+  padding-top: $base-space;
+  position: fixed;
+  top:0;
+  left: 0;
+  right:0;
+  z-index: 999;
+
+
+  .wrapper-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .line{
+      background: $base-color;
+      height: 1px;
+      flex: 1 1 1px;
+    }
+
+    .logo{
+        margin: 0 20px;
+    }
+  }
+
+  .navigation{
+    padding: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    .nav-button{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      flex: 0 1 185px; // only scalable
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      position: relative;
+
+      .title {
+        flex-basis: 100px;
+      }
+
+      &:hover{
+        .title {
+          color: $base-color;
+        }
+      }
+
+      &.user-info{
+        margin-left: auto;
+        margin-right: 15px;
+      }
+
+
+      &:last-of-type{
+        flex-basis: 57px; // only scalable
+        .badge{
+          position: absolute;
+          top:4px;
+          left:50%;
+          transform: translateX(-50%);
+          background-color: transparent;
+          font-size: 1rem;
+        }
+      }
+
+    }
+
+  }
+}

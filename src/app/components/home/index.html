@@ -1,0 +1,49 @@
+<div class="wrapper-content wow fadeInUp" data-wow-delay=".3s">
+  <div class="text-center">
+    <button class="btn-base btn-outline btn-more-products" ui-sref="app.products">sản phẩm</button>
+  </div>
+  <div class="products">
+    <div class="product" ng-repeat="product in $ctrl.products">
+      <img ng-src="{{::product.url}}" alt="" class="banner">
+      <div class="info">
+        <p class="name">
+          {{::product.name}}
+        </p>
+        <p class="price">
+          chỉ {{::product.price | currency: ""}} <span class="unit">vnd</span>
+        </p>
+        <button class="btn-base btn-outline btn-more-products" ui-sref="app.products.detail({id: product.id})">mua ngay</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="wrapper-content wow fadeInUp" data-wow-delay=".3s">
+  <promotional-component></promotional-component>
+</div>
+
+<div class="wrapper-content">
+  <div class="text-center">
+    <button class="btn-base btn-outline btn-more-products" ui-sref="app.products">khuyến mãi</button>
+  </div>
+  <div class="product-promotion wow fadeInUp" data-wow-delay=".3s">
+    <div class="wrapper-banner">
+      <img ng-src="{{::$ctrl.productSale.banner}}" alt="" class="banner">
+      <div class="info">
+        <button class="btn-base btn-outline btn-more-products" ui-sref="app.products.detail({id: $ctrl.productSale.id})">xem chi tiết</button>
+      </div>
+    </div>
+
+    <div class="products-control wow fadeInUp" data-wow-delay=".3s">
+      <div class="product" ng-repeat="product in $ctrl.products" ng-click="$ctrl.selectPromotionProduct(product)">
+        <img ng-src="{{::product.url}}" alt="" class="banner">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="wrapper-content wow fadeInUp" data-wow-delay=".6s">
+  <support-component></support-component>
+</div>

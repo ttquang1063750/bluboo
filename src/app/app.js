@@ -1,12 +1,70 @@
 import 'bootstrap/dist/css/bootstrap.css';
+import 'wowjs/css/libs/animate.css';
+import 'slick-carousel/slick/slick.scss';
+import 'fullpage.js/dist/jquery.fullpage.min.css';
 import '../style/app.scss';
 
 import angular from 'angular';
-import uirouter from 'angular-ui-router';
+import uirouter from '@uirouter/angularjs';
+import {WOW} from 'wowjs';
 
+//Configs
 import routing from './app.config';
-import home from './features/home';
+
+
+// Components
+import headerComponent  from './components/header';
+import footerComponent  from './components/footer';
+import PromotionalComponent from './components/promotional';
+import SupportComponent from './components/support';
+import homeComponent  from './components/home';
+import productsComponent  from './components/products';
+import productDetailComponent  from './components/product-detail';
+
+
+let components = [
+  headerComponent,
+  footerComponent,
+  PromotionalComponent,
+  SupportComponent,
+  homeComponent,
+  productsComponent,
+  productDetailComponent
+];
+
+
+// Services
+import ProductService from './services/product.service';
+
+let services = [
+  ProductService
+];
+
+
+//Directive
+import fullpage from './directives/fullpage.directive';
+import fixedHeader from './directives/fixed.header.directive';
+let directives = [
+  fullpage,
+  fixedHeader
+];
 
 angular
-    .module('app', [uirouter, home])
-    .config(routing);
+    .module('app', [
+      uirouter,
+      ...components,
+      ...services,
+      ...directives
+    ])
+    .config(routing)
+    .run(['$rootScope', function ($rootScope) {
+
+      //create a new instance
+      let wow = new WOW();
+      wow.init();
+
+      $rootScope.$on('$viewContentLoaded', function () {
+        //when the view changes sync wow
+        wow.sync();
+      });
+    }]);

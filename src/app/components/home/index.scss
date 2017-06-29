@@ -1,0 +1,119 @@
+home-component{
+
+  .products{
+    display: flex; //Default
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    .product{
+      flex: 0 1 48%;
+      padding: 10px;
+      margin: 20px 1%;
+      border: 1px solid $base-color;
+      position: relative;
+      overflow: hidden;
+
+      .banner{
+        width:100%;
+        height: auto;
+        display: block;
+      }
+
+      &:last-child{
+        margin-right: auto;
+      }
+
+      .info{
+        position: absolute;
+        top:100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: all 0.3s ease-in;
+        background-color: rgba(0,0,0,0.6);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+
+        .name{
+          font-size: 3.2rem;
+          color: $base-color;
+        }
+
+        .price{
+          font-size: 3rem;
+          color: $base-color;
+          margin-bottom: 10px;
+
+          .unit{
+            color: $base-color;
+          }
+        }
+      }
+
+      &:hover{
+        .info{
+          opacity: 1;
+          top:0;
+        }
+      }
+    }
+  }
+
+
+  .product-promotion{
+    .wrapper-banner{
+      position: relative;
+      width:100%;
+      padding: 10px;
+      border: 1px solid $base-color;
+
+      .banner{
+        width:100%;
+        height:auto;
+        display: block;
+      }
+
+      .info{
+        position: absolute;
+        top:100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: all 0.3s ease-in;
+        background-color: rgba(0,0,0,0.6);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+      }
+
+      &:hover{
+        .info{
+          opacity: 1;
+          top:0;
+        }
+      }
+    }
+
+    .products-control{
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .product{
+        border: 1px solid $base-color;
+        flex: 1 0 30%;
+        padding: 10px;
+        margin: 20px 5% 20px 0;
+      }
+    }
+  }
+}

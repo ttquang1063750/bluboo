@@ -1,0 +1,64 @@
+.products-promotion{
+  margin: 0 auto;
+
+
+  .slick-arrow{
+    z-index: 10;
+    &.slick-prev{
+      left: 25px;
+    }
+
+    &.slick-next{
+      right:25px;
+    }
+  }
+
+
+  .slider-for{
+    margin: 0 10px;
+  }
+  .slider-nav{
+    margin: $base-padding 0 0;
+
+    .slick-list{
+      .slick-track{
+        .slick-slide{
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+
+  .carousel-caption{
+    position: absolute;
+    left: 15%;
+    top: 15px;
+    text-align: left;
+
+    .title {
+      font-size: 2rem;
+      color: $white;
+      text-transform: uppercase;
+    }
+
+    .description {
+      font-size: 1rem;
+      color: $white;
+    }
+
+    .price {
+      margin: 10px auto;
+      .last-price {
+        font-size: 1rem;
+        color: $color;
+        text-decoration: line-through;
+        font-style: italic;
+      }
+
+      .new-price {
+        font-size: 1.5rem;
+        color: $white;
+      }
+    }
+  }
+}
