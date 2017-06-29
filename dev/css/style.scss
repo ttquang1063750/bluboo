@@ -3,6 +3,7 @@
 @import "buttons";
 @import "header";
 @import "footer";
+@import "products_promotion";
 @import "products";
 
 
@@ -26,63 +27,14 @@ body {
 #wrapper {
   width: 100%;
   padding: $header-height $base-padding $base-padding * 3;
+  @media #{$info-xs} {
+    padding: $header-height 10px $base-padding * 3;
+  }
 
   #main {
 
     section {
       padding: 0 0 $base-padding;
-
-      &.sale{
-        .banner {
-          position: relative;
-          width: 100%;
-          margin-bottom: $base-padding;
-
-          .info {
-            position: absolute;
-            top: $base-padding;
-            left: $base-padding * 3;
-
-            > * {
-              margin-bottom: 15px;
-            }
-
-            .title {
-              font-size: 2.5rem;
-              color: $white;
-              text-transform: uppercase;
-            }
-
-            .description {
-              font-size: 1rem;
-              color: $white;
-            }
-
-            .price {
-              .last-price {
-                font-size: 1.2rem;
-                color: #999;
-                text-decoration: line-through;
-                font-style: italic;
-              }
-
-              .new-price {
-                font-size: 2rem;
-                color: $white;
-              }
-            }
-          }
-        }
-
-        .banner-control {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          .sub-control {
-            width: 33%;
-          }
-        }
-      }
 
       &.feature {
         padding: $base-padding 0;

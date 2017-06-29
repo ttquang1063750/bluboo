@@ -81,24 +81,14 @@ a:hover {
 .img-responsive {
   width: 100%;
   height: auto;
-  display: block; }
+  display: block;
+  margin: 0 auto; }
 
 .btn {
-  -webkit-tap-highlight-color: transparent;
-  cursor: pointer;
-  border: none;
-  box-shadow: none;
   color: white;
   background: #898f4b;
-  text-align: center;
-  padding: 10px 25px;
-  font-size: 1.15rem;
-  text-transform: uppercase;
+  font-size: 1rem;
   font-family: "avenir-lt-std-45-book", sans-serif; }
-  .btn:hover, .btn:focus, .btn:active {
-    border: none; }
-  .btn:hover {
-    opacity: 0.7; }
 
 /* =Header
  -------------------------------------------------------------- */
@@ -187,6 +177,34 @@ footer {
       footer .terms > * {
         border-left: none; } }
 
+#products-promotion {
+  margin: 0 auto; }
+  #products-promotion .carousel-control-next,
+  #products-promotion .carousel-control-prev {
+    width: 60px; }
+  #products-promotion .carousel-caption {
+    top: 15px;
+    bottom: auto;
+    right: auto;
+    text-align: left; }
+    #products-promotion .carousel-caption .title {
+      font-size: 2rem;
+      color: white;
+      text-transform: uppercase; }
+    #products-promotion .carousel-caption .description {
+      font-size: 1rem;
+      color: white; }
+    #products-promotion .carousel-caption .price {
+      margin: 10px auto; }
+      #products-promotion .carousel-caption .price .last-price {
+        font-size: 1rem;
+        color: #898f4b;
+        text-decoration: line-through;
+        font-style: italic; }
+      #products-promotion .carousel-caption .price .new-price {
+        font-size: 1.5rem;
+        color: white; }
+
 .product .info > * {
   margin-bottom: 15px; }
 .product .info .title {
@@ -196,7 +214,7 @@ footer {
   font-size: 1rem; }
 .product .info .price .last-price {
   font-size: 1.2rem;
-  color: #999;
+  color: #898f4b;
   text-decoration: line-through;
   font-style: italic; }
 .product .info .price .new-price {
@@ -218,39 +236,11 @@ body {
 #wrapper {
   width: 100%;
   padding: 80px 35px 105px; }
+  @media only screen and (max-width: 1023px) {
+    #wrapper {
+      padding: 80px 10px 105px; } }
   #wrapper #main section {
     padding: 0 0 35px; }
-    #wrapper #main section.sale .banner {
-      position: relative;
-      width: 100%;
-      margin-bottom: 35px; }
-      #wrapper #main section.sale .banner .info {
-        position: absolute;
-        top: 35px;
-        left: 105px; }
-        #wrapper #main section.sale .banner .info > * {
-          margin-bottom: 15px; }
-        #wrapper #main section.sale .banner .info .title {
-          font-size: 2.5rem;
-          color: white;
-          text-transform: uppercase; }
-        #wrapper #main section.sale .banner .info .description {
-          font-size: 1rem;
-          color: white; }
-        #wrapper #main section.sale .banner .info .price .last-price {
-          font-size: 1.2rem;
-          color: #999;
-          text-decoration: line-through;
-          font-style: italic; }
-        #wrapper #main section.sale .banner .info .price .new-price {
-          font-size: 2rem;
-          color: white; }
-    #wrapper #main section.sale .banner-control {
-      display: flex;
-      justify-content: space-between;
-      align-items: center; }
-      #wrapper #main section.sale .banner-control .sub-control {
-        width: 33%; }
     #wrapper #main section.feature {
       padding: 35px 0;
       border-top: 4px double #898f4b;
