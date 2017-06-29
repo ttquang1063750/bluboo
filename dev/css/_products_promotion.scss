@@ -2,15 +2,37 @@
   margin: 0 auto;
 
 
-  .carousel-control-next,
-  .carousel-control-prev{
-    width:60px;
+  .slick-arrow{
+    z-index: 10;
+    &.slick-prev{
+      left: 25px;
+    }
+
+    &.slick-next{
+      right:25px;
+    }
+  }
+
+
+  .slider-for{
+    margin: 0 10px;
+  }
+  .slider-nav{
+    margin: $base-padding 0 0;
+
+    .slick-list{
+      .slick-track{
+        .slick-slide{
+          margin: 0 10px;
+        }
+      }
+    }
   }
 
   .carousel-caption{
+    position: absolute;
+    left: 15%;
     top: 15px;
-    bottom:auto;
-    right:auto;
     text-align: left;
 
     .title {
