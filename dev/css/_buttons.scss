@@ -2,22 +2,11 @@
   &:hover,
   &:focus,
   &:active{
-    border: none;
+    opacity: 0.7;
+    color: $white;
   }
 
-  -webkit-tap-highlight-color: transparent;
-  cursor: pointer;
-  border: none;
-  box-shadow: none;
   color: $white;
   background: $color;
-  text-align: center;
-  padding: 10px 25px;
-  font-size: 1.15rem;
-  text-transform: uppercase;
   font-family: $font-primary;
-
-  &:hover {
-    opacity: 0.7;
-  }
 }
