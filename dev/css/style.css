@@ -287,11 +287,11 @@ a:hover {
   display: block;
   margin: 0 auto; }
 
-.btn {
+.btn-default {
   color: white;
   background: #898f4b;
   font-family: "avenir-lt-std-45-book", sans-serif; }
-  .btn:hover, .btn:focus, .btn:active {
+  .btn-default:hover, .btn-default:focus, .btn-default:active {
     opacity: 0.7;
     color: white; }
 
@@ -538,11 +538,15 @@ footer {
       border: 1px solid gray;
       border-right: none;
       vertical-align: top;
-      margin-right: -5px; }
+      margin-right: -5px;
+      font-size: 0.6rem; }
       .product-info .product-description .area-buy-product .segmented-control .item:last-child {
         border-right: 1px solid gray; }
   .product-info .tabs {
     border-bottom: 1px solid #898f4b; }
+    .product-info .tabs .tab {
+      padding: 10px;
+      text-align: center; }
 
 .product .info > * {
   margin-bottom: 15px; }

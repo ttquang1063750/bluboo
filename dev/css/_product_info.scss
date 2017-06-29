@@ -180,6 +180,7 @@
           border-right: none;
           vertical-align: top;
           margin-right: -5px;
+          font-size: 0.6rem;
 
           &:last-child{
             border-right: 1px solid gray;
@@ -191,9 +192,9 @@
 
   .tabs{
     border-bottom: 1px solid $color;
-    > *{
-
-      
+    .tab{
+        padding: 10px;
+      text-align: center;
     }
   }
 }
