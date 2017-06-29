@@ -3,10 +3,13 @@
 @import "variables";
 @import "normalize";
 @import "buttons";
+@import "input";
+@import "panel";
 @import "header";
 @import "footer";
 @import "products_promotion";
 @import "product_info";
+@import "fixed_area";
 @import "product";
 
 
@@ -25,17 +28,60 @@ body {
 }
 
 
-/* =Template
--------------------------------------------------------------- */
-#wrapper {
-  width: 100%;
-  padding: $header-height $base-padding $base-padding * 3;
+.hidden-xs{
   @media #{$info-xs} {
-    padding: $header-height 10px $base-padding * 3;
+    display: none;
+  }
+}
+
+.show-xs{
+  display: none;
+  @media #{$info-xs} {
+    display: block;
+  }
+}
+
+/* =BUY PRODUCT
+-------------------------------------------------------------- */
+.area-buy-product {
+  padding-left: 20px;
+  margin-bottom: 10px;
+
+  > * {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 20px;
   }
 
-  #main {
+  .segmented-control {
+    .item {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
+      border: 1px solid gray;
+      border-right: none;
+      vertical-align: top;
+      margin-right: -5px;
+      font-size: 0.6rem;
 
+      &:last-child {
+        border-right: 1px solid gray;
+      }
+    }
+  }
+}
+
+
+/* =Template
+-------------------------------------------------------------- */
+
+#wrapper {
+  width: 100%;
+  padding: $header-height $base-padding $base-padding;
+
+  #main {
     section {
       padding: 0 0 $base-padding;
 
@@ -56,6 +102,7 @@ body {
           }
         }
       }
+
 
       &.form{
         width:40%;

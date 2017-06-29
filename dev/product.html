@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
   <link rel="stylesheet" href="css/flexboxgrid.min.css"/>
-  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <!--<link rel="stylesheet" href="css/bootstrap.min.css"/>-->
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 
@@ -25,9 +25,9 @@
 <div id="wrapper">
 
   <header class="page-header">
-    <button id="btn-menu" class="btn btn-default">
+    <div id="btn-menu" class="btn-default">
       <i class="fa fa-bars" aria-hidden="true"></i>
-    </button>
+    </div>
     <div id="navigation" class="row between-md middle-md">
       <nav class="col-md-4 col-xs-12">
         <h1 class="logo row center-xs  start-md middle-xs">
@@ -128,6 +128,73 @@
     </div>
   </header>
 
+
+  <!--Fixed area-->
+  <div class="fixed-area-header">
+    <div class="row end-xs middle-xs">
+      <a href="#description" class="btn"> Mô tả</a>
+      <a href="#parameter" class="btn"> thông số kỹ thuật</a>
+      <a href="#rating" class="btn">
+          <span class="stars">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+          </span>
+      </a>
+    </div>
+  </div>
+  <div class="fixed-area-right-side col-md-3 col-xs-1">
+    <div class="support hidden-xs">
+      <p class="info">
+        Liên hệ <a ui-sref="app.home">BluBoo</a> về chính sách <a ui-sref="app.home">Hỗ trợ Mua hàng</a>
+        và <a ui-sref="app.home">Hướng dẫn sử dụng Sản phẩm</a>
+      </p>
+      <form>
+        <div class="form-group">
+          <input type="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <input type="tel" placeholder="Số ĐT">
+        </div>
+
+        <button class="btn btn-default">Gửi</button>
+      </form>
+    </div>
+
+    <div class="area-buy-product hidden-xs">
+      <div>
+        <h4>Số lượng</h4>
+        <div class="segmented-control">
+          <span class="item"> <i class="fa fa-minus"></i></span>
+          <span class="item"> 1 </span>
+          <span class="item"> <i class="fa fa-plus"></i></span>
+        </div>
+      </div>
+
+      <div class="btn btn-default">
+        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+        mua ngay
+      </div>
+    </div>
+
+    <div class="product-recommendation hidden-xs">
+      <div><img class="img-responsive" src="img/promotion.png"></div>
+      <div><img class="img-responsive" src="img/promotion.png"></div>
+      <div><img class="img-responsive" src="img/promotion.png"></div>
+      <div><img class="img-responsive" src="img/promotion.png"></div>
+      <div><img class="img-responsive" src="img/promotion.png"></div>
+    </div>
+
+    <div class="icons show-xs">
+      <a href="index.html"><i class="fa fa-home"></i></a>
+      <a href="index.html"><i class="fa fa-cart-arrow-down"></i></a>
+      <a href="index.html"><i class="fa fa-user-md"></i></a>
+    </div>
+
+  </div>
+
   <div id="main">
     <div id="content">
       <section class="product-info">
@@ -193,38 +260,38 @@
                   <div class="others has-border orange">
                     <div class="price">
                       Giá:
-                      <span class="new-price">25.990.000₫</span>
-                      <span class="last-price">28.990.000₫</span>
+                      <span class="new-price wow fadeInUp" data-wow-delay=".1s">25.990.000₫</span>
+                      <span class="last-price wow fadeInUp" data-wow-delay=".1s">28.990.000₫</span>
                     </div>
 
                     <div class="choose-color">
-                      <h3>
+                      <h3 class=" wow fadeInUp" data-wow-delay=".1s">
                         chọn màu: <span class="color color-1"></span>
                       </h3>
 
                       <div>
-                        <span class="color color-1"></span>
-                        <span class="color color-2"></span>
-                        <span class="color color-3"></span>
+                        <span class="color color-1 wow fadeInUp" data-wow-delay=".1s"></span>
+                        <span class="color color-2 wow fadeInUp" data-wow-delay=".1s"></span>
+                        <span class="color color-3 wow fadeInUp" data-wow-delay=".1s"></span>
                       </div>
                     </div>
 
-                    <p class="has-dot">
+                    <p class="has-dot wow fadeInUp" data-wow-delay=".1s">
                       Cơ hội trúng xe SH 150i khi mua iPhone tại Hà Nội, Đà Nẵng
                     </p>
-                    <p class="has-dot">
+                    <p class="has-dot wow fadeInUp" data-wow-delay=".1s">
                       Giảm thêm 350.000đ khi thanh toán trực tuyến bằng Master Card
                     </p>
                   </div>
 
-                  <div class="others has-border">
+                  <div class="others has-border wow fadeInUp" data-wow-delay=".1s">
                     <p class="has-dot">
                       Cơ hội trúng xe SH 150i khi mua iPhone tại Hà Nội, Đà Nẵng
                     </p>
                   </div>
 
                   <div class="others">
-                    <p class="has-dot">
+                    <p class="has-dot wow fadeInUp" data-wow-delay=".1s">
                       Cơ hội trúng xe SH 150i khi mua iPhone tại Hà Nội, Đà Nẵng
                     </p>
                   </div>
@@ -260,12 +327,211 @@
       <section class="product-info">
         <div class="row">
           <div class="col-md-9 col-xs-12">
-              <div class="row tabs">
-                <a href="#" class="col-xs tab">mô tả</a>
-                <a href="#" class="col-xs tab">video</a>
-                <a href="#" class="col-xs tab">kỹ thuật</a>
-                <a href="#" class="col-xs tab">đánh giá</a>
+            <div class="row tabs">
+              <a href="#description" class="col-xs tab">mô tả</a>
+              <a href="#video" class="col-xs tab">video</a>
+              <a href="#parameter" class="col-xs tab">kỹ thuật</a>
+              <a href="#rating" class="col-xs tab">đánh giá</a>
+            </div>
+            <div class="product-wrapper">
+
+              <!--Product description-->
+              <div class="product-content" id="description">
+                <h2 class="title wow fadeInUp" data-wow-delay=".1s">Đặc điểm nổi bật của iPhone 7 Plus 256GB</h2>
+                <div class="content wow fadeInUp" data-wow-delay=".1s">
+                  Thay đổi dãy nhựa an-ten bắt sóng được đưa vòng lên trên thay vì cắt ngang ở mặt lưng như trước.
+                </div>
+                <div class="photo wow fadeInUp" data-wow-delay=".1s">
+                  <img class="img-responsive" src="img/phone.png">
+                </div>
+                <div class="content-bottom wow fadeInUp" data-wow-delay=".1s">
+                  Thay đổi dãy nhựa an-ten bắt sóng được đưa vòng lên trên thay vì cắt ngang ở mặt lưng như trước.
+                </div>
               </div>
+
+
+              <!--Videos-->
+              <div class="product-content" id="video">
+                <div class="slider-for-video">
+                  <div class="slider-item">
+                    <video controls class="img-responsive">
+                      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                      Your browser does not support HTML5 video.
+                    </video>
+                  </div>
+                  <div class="slider-item">
+                    <video controls class="img-responsive">
+                      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                      Your browser does not support HTML5 video.
+                    </video>
+                  </div>
+                  <div class="slider-item">
+                    <video controls class="img-responsive">
+                      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                      Your browser does not support HTML5 video.
+                    </video>
+                  </div>
+                  <div class="slider-item">
+                    <video controls class="img-responsive">
+                      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                      Your browser does not support HTML5 video.
+                    </video>
+                  </div>
+                  <div class="slider-item">
+                    <video controls class="img-responsive">
+                      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                      Your browser does not support HTML5 video.
+                    </video>
+                  </div>
+                </div>
+                <div class="slider-nav-video">
+                  <p>video 1</p>
+                  <p>video 2</p>
+                  <p>video 3</p>
+                  <p>video 4</p>
+                  <p>video 5</p>
+                </div>
+              </div>
+
+
+              <!--Parameter-->
+              <div class="product-content" id="parameter">
+                <div class="row wow fadeInUp" data-wow-delay=".1s">
+                  <div class="col-xs-4">Loại màn hành(công nghệ màn hình)</div>
+                  <div class="col-xs-8">Super AMOLED touch screen</div>
+                </div>
+
+                <div class="row wow fadeInUp" data-wow-delay=".1s">
+                  <div class="col-xs-4">kích thước màn hình</div>
+                  <div class="col-xs-8">5.5 inch</div>
+                </div>
+
+                <div class="row wow fadeInUp" data-wow-delay=".2s">
+                  <div class="col-xs-4">độ phân giải màn hình</div>
+                  <div class="col-xs-8">1920 x 1080 pixels</div>
+                </div>
+
+                <div class="row wow fadeInUp" data-wow-delay=".3s">
+                  <div class="col-xs-4">Hiển thị màu sắc</div>
+                  <div class="col-xs-8">hơn 16 triệu màu</div>
+                </div>
+              </div>
+
+
+              <!--Rating-->
+              <div class="product-content" id="rating">
+                <div class="row rating-detail wow fadeInUp" data-wow-delay=".1s">
+                  <div class="col-xs-5 rating-info">
+                    <p class="title-rating">đánh giá trung bình</p>
+                    <p class="point">3.5/5</p>
+                    <div class="stars">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                      <i class="fa fa-star-o" aria-hidden="true"></i>
+                    </div>
+                    <p class="number-user-rating">( 3 nhận xét )</p>
+                  </div>
+                  <div class="col-xs-7 rating-bars">
+                    <div class="row bar middle-xs">
+                      <div class="star col-xs-2">
+                        5 <i class="fa fa-star" aria-hidden="true"></i>
+                      </div>
+                      <div class="manna col-xs-8">
+                        <div class="has-manna" style="width: 100%;"></div>
+                      </div>
+                      <div class="percent col-xs-2">100%</div>
+                    </div>
+                    <div class="row bar middle-xs">
+                      <div class="star col-xs-2">
+                        4 <i class="fa fa-star" aria-hidden="true"></i>
+                      </div>
+                      <div class="manna col-xs-8">
+                        <div class="has-manna" style="width: 90%;"></div>
+                      </div>
+                      <div class="percent col-xs-2">0%</div>
+                    </div>
+                    <div class="row bar middle-xs">
+                      <div class="star col-xs-2">
+                        3 <i class="fa fa-star" aria-hidden="true"></i>
+                      </div>
+                      <div class="manna col-xs-8">
+                        <div class="has-manna" style="width: 80%;"></div>
+                      </div>
+                      <div class="percent col-xs-2">0%</div>
+                    </div>
+                    <div class="row bar middle-xs">
+                      <div class="star col-xs-2">
+                        2 <i class="fa fa-star" aria-hidden="true"></i>
+                      </div>
+                      <div class="manna col-xs-8">
+                        <div class="has-manna" style="width: 70%;"></div>
+                      </div>
+                      <div class="percent col-xs-2">0%</div>
+                    </div>
+                    <div class="row bar middle-xs">
+                      <div class="star col-xs-2">
+                        1 <i class="fa fa-star" aria-hidden="true"></i>
+                      </div>
+                      <div class="manna col-xs-8">
+                        <div class="has-manna" style="width: 60%;"></div>
+                      </div>
+                      <div class="percent col-xs-2">0%</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row wow fadeInUp" data-wow-delay=".1s">
+                  <h2 class="title">60 người dùng đánh giá <strong>bluboo 1</strong></h2>
+                </div>
+
+                <div class="row user-rating">
+                  <div class="row start-xs middle-xs wow fadeInUp" data-wow-delay=".1s">
+                    <div class="col-xs-4 username">võ văn tần</div>
+                    <div class="col-xs-8 date-post">3 ngày trước</div>
+                    <div class="col-xs-12 comment">
+                        <span class="stars">
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star" aria-hidden="true"></i>
+                          <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                          <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </span>
+
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dolore eius nesciunt nobis quaerat
+                      rem reprehenderit, sapiente. Atque, debitis distinctio doloribus, facilis ipsa iusto laborum nisi
+                      officiis quaerat quidem voluptatibus!
+                    </div>
+                  </div>
+                </div>
+
+                <div class="user-send-comment">
+                  <h2 class="title">Gửi đánh giá của bạn</h2>
+                  <p>1. Đánh giá của bạn về sản phẩm này:
+                    <span class="stars">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                    </span>
+                  </p>
+                  <div class="form-group">
+                    <label>2. Tiêu đề của bạn</label>
+                    <input type="text" placeholder="Tiêu đề" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label>3. Viết đánh giá của bạn vào bên dưới</label>
+                    <textarea type="text" placeholder="đánh giá của bạn" class="form-control" rows="4"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-default col-xs-2">Gửi</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -327,15 +593,14 @@
 
     $("#btn-menu").on('click', function (e) {
       var _t = $(this);
-      if(_t.hasClass("active")){
+      if (_t.hasClass("active")) {
         _t.removeClass("active");
-      }else{
+      } else {
         _t.addClass("active");
       }
     });
 
     new WOW().init();
-
 
 
     $('.slider-for').slick({
@@ -363,6 +628,60 @@
 
       }]
     });
+
+
+    $('.slider-for-video').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      fade: true,
+      asNavFor: '.slider-nav-video'
+    });
+    $('.slider-nav-video').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      asNavFor: '.slider-for-video',
+      focusOnSelect: true
+    });
+
+
+    // Select all links with hashes
+    $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function (event) {
+          // On-page links
+          if (
+              location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '')
+              &&
+              location.hostname === this.hostname
+          ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+              // Only prevent default if animation is actually gonna happen
+              event.preventDefault();
+              $('html, body').animate({
+                scrollTop: target.offset().top
+              }, 1000, function () {
+                // Callback after animation
+                // Must change focus!
+                var $target = $(target);
+                $target.focus();
+                if ($target.is(":focus")) { // Checking if the target was focused
+                  return false;
+                } else {
+                  $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                  $target.focus(); // Set focus again
+                }
+                ;
+              });
+            }
+          }
+        });
   }
   window.onload = init();
 </script>
