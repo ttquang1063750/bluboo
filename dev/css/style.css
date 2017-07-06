@@ -314,42 +314,52 @@ footer {
       margin-top: 15px;
       text-transform: uppercase; }
 
-.products-promotion {
-  margin: 0 auto; }
-  .products-promotion .slick-arrow {
-    z-index: 10; }
-    .products-promotion .slick-arrow.slick-prev {
-      left: 25px; }
-    .products-promotion .slick-arrow.slick-next {
-      right: 25px; }
-  .products-promotion .slider-for {
+.products-promotion .slick-arrow {
+  z-index: 10; }
+  .products-promotion .slick-arrow.slick-prev {
+    left: 25px; }
+  .products-promotion .slick-arrow.slick-next {
+    right: 25px; }
+.products-promotion .slider-for {
+  margin: 0 10px; }
+.products-promotion .slider-nav {
+  margin: 35px 0 0; }
+  .products-promotion .slider-nav .slick-list .slick-track .slick-slide {
     margin: 0 10px; }
-  .products-promotion .slider-nav {
-    margin: 35px 0 0; }
-    .products-promotion .slider-nav .slick-list .slick-track .slick-slide {
-      margin: 0 10px; }
-  .products-promotion .carousel-caption {
-    position: absolute;
-    left: 15%;
-    top: 15px;
-    text-align: left; }
-    .products-promotion .carousel-caption .title {
-      font-size: 2rem;
-      color: white;
-      text-transform: uppercase; }
-    .products-promotion .carousel-caption .description {
+.products-promotion .carousel-caption {
+  position: absolute;
+  left: 15%;
+  top: 15px;
+  text-align: left; }
+  @media only screen and (max-width: 1023px) {
+    .products-promotion .carousel-caption {
+      left: 50%;
+      top: 50%;
+      text-align: center;
+      transform: translate(-50%, -50%); } }
+  .products-promotion .carousel-caption .title {
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase; }
+    @media only screen and (max-width: 1023px) {
+      .products-promotion .carousel-caption .title {
+        font-size: 1.5rem; } }
+  .products-promotion .carousel-caption .description {
+    font-size: 1rem;
+    color: white; }
+  .products-promotion .carousel-caption .price {
+    margin: 10px auto; }
+    @media only screen and (max-width: 1023px) {
+      .products-promotion .carousel-caption .price {
+        margin: 1px auto; } }
+    .products-promotion .carousel-caption .price .last-price {
       font-size: 1rem;
+      color: #898f4b;
+      text-decoration: line-through;
+      font-style: italic; }
+    .products-promotion .carousel-caption .price .new-price {
+      font-size: 1.5rem;
       color: white; }
-    .products-promotion .carousel-caption .price {
-      margin: 10px auto; }
-      .products-promotion .carousel-caption .price .last-price {
-        font-size: 1rem;
-        color: #898f4b;
-        text-decoration: line-through;
-        font-style: italic; }
-      .products-promotion .carousel-caption .price .new-price {
-        font-size: 1.5rem;
-        color: white; }
 
 .product-info {
   margin: 35px auto; }

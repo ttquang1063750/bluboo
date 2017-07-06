@@ -1,6 +1,4 @@
 .products-promotion{
-  margin: 0 auto;
-
 
   .slick-arrow{
     z-index: 10;
@@ -35,10 +33,22 @@
     top: 15px;
     text-align: left;
 
+
+    @media #{$info-xs} {
+      left: 50%;
+      top: 50%;
+      text-align: center;
+      transform: translate(-50%, -50%);
+    }
+
     .title {
       font-size: 2rem;
       color: $white;
       text-transform: uppercase;
+
+      @media #{$info-xs} {
+        font-size: 1.5rem;
+      }
     }
 
     .description {
@@ -48,6 +58,10 @@
 
     .price {
       margin: 10px auto;
+      @media #{$info-xs} {
+        margin: 5px auto;
+      }
+
       .last-price {
         font-size: 1rem;
         color: $color;
