@@ -3,15 +3,22 @@
 // fonts
 @font-face {
   font-family: avenir-lt-std-45-book;
-  src: url(avenir-lt-std-45-book.otf);
+  src: url(fonts/avenir-lt-std-45-book.otf);
 }
 $font-primary: Helvetica,Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif;
 $font-heading: Helvetica,Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif;
 
 /* Colors */
 $white: rgb(255, 255, 255);
+//$color: #2caefa;
 $color: #898f4b;
 $price: #d0021b;
+
+$color-hover: #898f4b;
+$background-color: #898f4b;
+$background-hover-color: #898f4b;
+$border-color: #898f4b;
+$border-hover-color: #898f4b;
 
 $dark-grey: rgb(80, 80, 80);
 $text-grey: rgb(100, 100, 100);
@@ -25,7 +32,7 @@ $space-between: 15px;
 
 /* Header height*/
 $header-height: 80px;
-$header-shadow: 20px;
+$header-shadow: 10px;
 
 
 /* Screen break*/

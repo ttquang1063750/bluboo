@@ -1,5 +1,3 @@
-@import "slick";
-@import "slick-theme";
 @import "variables";
 @import "normalize";
 @import "buttons";
@@ -7,6 +5,9 @@
 @import "panel";
 @import "header";
 @import "footer";
+@import "choose_color";
+@import "product_buy";
+@import "feature";
 @import "products_promotion";
 @import "product_info";
 @import "fixed_area";
@@ -27,6 +28,10 @@ body {
   font-size: 1rem;
 }
 
+section {
+  margin: 0 0 $base-padding;
+}
+
 
 .hidden-xs{
   @media #{$info-xs} {
@@ -41,38 +46,6 @@ body {
   }
 }
 
-/* =BUY PRODUCT
--------------------------------------------------------------- */
-.area-buy-product {
-  padding-left: 20px;
-  margin-bottom: 10px;
-
-  > * {
-    display: inline-block;
-    vertical-align: bottom;
-    margin-right: 20px;
-  }
-
-  .segmented-control {
-    .item {
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      text-align: center;
-      line-height: 30px;
-      border: 1px solid gray;
-      border-right: none;
-      vertical-align: top;
-      margin-right: -5px;
-      font-size: 0.6rem;
-
-      &:last-child {
-        border-right: 1px solid gray;
-      }
-    }
-  }
-}
-
 
 /* =Template
 -------------------------------------------------------------- */
@@ -80,57 +53,6 @@ body {
 #wrapper {
   width: 100%;
   padding: $header-height $base-padding $base-padding;
-
-  #main {
-    section {
-      padding: 0 0 $base-padding;
-
-      &.feature {
-        padding: $base-padding 0;
-        border-top: 4px double $color;
-        border-bottom: 4px double $color;
-
-        margin-bottom: $space-between;
-
-        .sub-promotion {
-          font-size: 3rem;
-          color: $color;
-          text-align: center;
-          h2 {
-            font-size: 1.5rem;
-            margin-top: 15px;
-          }
-        }
-      }
-
-
-      &.form{
-        width:40%;
-        margin: 0 auto;
-
-        .title{
-          font-size: 3rem;
-          text-align: left;
-          padding-bottom: 5px;
-          margin-bottom: $space-between;
-          border-bottom: 2px solid $color;
-        }
-
-        form{
-          input{
-            width:100%;
-            height: 2rem;
-            border: 1px solid $color;
-            color: $color;
-            padding: 10px 12px;
-            font-size: 1rem;
-            margin-bottom: $space-between;
-          }
-        }
-      }
-    }
-  }
-
 }
 
 /* =Extras
