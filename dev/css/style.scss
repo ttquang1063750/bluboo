@@ -55,6 +55,15 @@ section {
   }
 }
 
+.slick-arrow{
+  z-index: 10;
+  &:before{
+    color: $color;
+  }
+  &.slick-disabled{
+    visibility: hidden;
+  }
+}
 
 /* =Template
 -------------------------------------------------------------- */

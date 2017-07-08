@@ -16,15 +16,33 @@
   }
 
   .product-recommendation{
-    max-height: 270px;
-    overflow: scroll;
-    > *{
-      height: 90px;
-      margin: 0 0 5px;
+    height: 302px;
+    overflow: hidden;
+    .product-recommendation-slider{
 
-      img{
-        height: 100%;
-        width: 100%;
+      .slick-arrow{
+        left: 50%;
+        margin-left: -10px;
+        transform: rotate(90deg);
+      }
+
+      .slick-prev{
+        top: 5px;
+      }
+
+      .slick-next{
+        top: auto;
+        bottom: 5px;
+      }
+      .slide-pref{
+        height: 90px;
+        width:100%;
+        display: block;
+        margin: 2px 0;
+
+        img{
+          height: 100%;
+        }
       }
     }
   }

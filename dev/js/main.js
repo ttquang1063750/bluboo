@@ -53,8 +53,6 @@ window.onload = function() {
     focusOnSelect: true,
     arrows: true,
     vertical: true,
-    prevArrow: $('.picture-nav-prev-arrow'),
-    nextArrow: $('.picture-nav-next-arrow'),
     responsive: [{
       breakpoint: 1023,
       settings: {
@@ -64,6 +62,24 @@ window.onload = function() {
 
     }]
   });
+
+  $('.product-recommendation-slider').slick({
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    focusOnSelect: true,
+    arrows: true,
+    vertical: true
+  });
+
+
+  // $('.productions > ul').slick({
+  //   infinite: false,
+  //   slidesToShow: 4,
+  //   slidesToScroll: 1,
+  //   focusOnSelect: true,
+  //   arrows: true
+  // });
 
 
 
