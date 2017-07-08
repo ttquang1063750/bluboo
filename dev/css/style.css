@@ -176,11 +176,9 @@ input[type],
   padding: 0 35px;
   margin: 0 auto;
   z-index: 999;
-  background-color: white;
-  min-height: 80px; }
+  background-color: white; }
   @media only screen and (max-width: 1023px) {
     .page-header {
-      min-height: 50px;
       padding: 0 10px; } }
   @media only screen and (max-width: 320px) {
     .page-header .btn {
@@ -214,6 +212,19 @@ input[type],
     font-family: Helvetica, Arial, "DejaVu Sans", "Liberation Sans", Freesans, sans-serif;
     color: #898f4b;
     font-size: 2rem; }
+  .page-header #navigation nav a {
+    font-size: 1.8rem; }
+    @media only screen and (max-width: 1023px) {
+      .page-header #navigation nav a {
+        border-top: 1px solid #898f4b;
+        padding: 5px 10px; }
+        .page-header #navigation nav a .icon {
+          width: 50px; } }
+    .page-header #navigation nav a .title {
+      font-size: 0.8rem;
+      padding: 5px 0; }
+      .page-header #navigation nav a .title.badge {
+        font-weight: bold; }
   .page-header #navigation nav > ul > li {
     max-width: 80px;
     margin: 5px; }
@@ -221,23 +232,9 @@ input[type],
       .page-header #navigation nav > ul > li {
         max-width: 100%;
         margin: 0;
-        padding: 0; }
-        .page-header #navigation nav > ul > li a {
-          border-top: 1px solid #898f4b;
-          padding: 5px 10px; }
-          .page-header #navigation nav > ul > li a .icon {
-            width: 50px; } }
+        padding: 0; } }
     .page-header #navigation nav > ul > li:last-child {
       margin-right: 0; }
-    .page-header #navigation nav > ul > li a {
-      font-size: 1.8rem; }
-      .page-header #navigation nav > ul > li a .fa-mobile {
-        font-size: 2.5rem; }
-      .page-header #navigation nav > ul > li a .title {
-        font-size: 0.8rem;
-        padding: 5px 0; }
-        .page-header #navigation nav > ul > li a .title.badge {
-          font-weight: bold; }
   .page-header #navigation nav.user-controls .cart {
     max-width: 50px;
     margin: 0;
@@ -245,6 +242,15 @@ input[type],
     @media only screen and (max-width: 1023px) {
       .page-header #navigation nav.user-controls .cart {
         max-width: 100%; } }
+  .page-header #navigation nav .slider-productions .slick-arrow.slick-prev {
+    left: 0; }
+  .page-header #navigation nav .slider-productions .slick-arrow.slick-next {
+    right: 0; }
+  @media only screen and (max-width: 1023px) {
+    .page-header #navigation nav .slider-productions .slider-productions-item {
+      border-top: 1px solid #898f4b; }
+      .page-header #navigation nav .slider-productions .slider-productions-item a {
+        border: none; } }
 
 /* =Footer
 -------------------------------------------------------------- */

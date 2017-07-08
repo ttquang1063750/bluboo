@@ -1,13 +1,50 @@
-window.onload = function() {
+window.onload = function () {
 
   new WOW().init();
 
   var $btnMenu = $('#btn-menu');
   var $navigation = $("#navigation");
+  var $sliderProducts = $('.slider-productions');
+  var refreshSlider = false;
 
-  $btnMenu.click(function(event){
+  //Set slider for products
+  $sliderProducts
+      .slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        focusOnSelect: true,
+        arrows: true,
+        responsive: [
+          {
+            breakpoint: 1023,
+            settings: {
+              slidesToShow: 4
+            }
+          },
+          {
+            breakpoint: 640,
+            settings: {
+              slidesToShow: 3
+            }
+          }
+        ]
+      })
+      .on("breakpoint", function () {
+        $navigation.removeAttr("style");
+        refreshSlider = false;
+      });
+
+
+  $btnMenu.click(function (event) {
     event.stopPropagation();
-    $navigation.slideToggle("fast");
+
+    $navigation.slideToggle(function () {
+      if(!refreshSlider){
+        $sliderProducts.slick('setPosition');
+        refreshSlider = true;
+      }
+    });
   });
   $navigation.on("click", function (event) {
     event.stopPropagation();
@@ -71,16 +108,6 @@ window.onload = function() {
     arrows: true,
     vertical: true
   });
-
-
-  // $('.productions > ul').slick({
-  //   infinite: false,
-  //   slidesToShow: 4,
-  //   slidesToScroll: 1,
-  //   focusOnSelect: true,
-  //   arrows: true
-  // });
-
 
 
   //Slider for video in product page
