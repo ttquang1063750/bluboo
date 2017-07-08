@@ -9,14 +9,22 @@
     &.slick-next{
       right:25px;
     }
+
+    &.slick-disabled{
+      opacity: 0.3;
+    }
   }
 
 
-  .slider-for{
+  .slider-for-promotion{
     margin: 0 10px;
   }
-  .slider-nav{
+  .slider-nav-promotion{
     margin: $base-padding 0 0;
+
+    @media #{$info-xs} {
+      margin: $base-padding-xs 0 0;
+    }
 
     .slick-list{
       .slick-track{
@@ -34,11 +42,20 @@
     text-align: left;
 
 
+    @media #{$info-phone-4} {
+      display: none;
+    }
+
     @media #{$info-xs} {
-      left: 50%;
+      left: 0;
+      right: 0;
       top: 50%;
       text-align: center;
-      transform: translate(-50%, -50%);
+      transform: translateY(-50%);
+
+      .btn{
+        padding: 2px 5px;
+      }
     }
 
     .title {

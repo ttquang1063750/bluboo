@@ -1,5 +1,10 @@
 .feature {
   padding: $base-padding 0;
+
+  @media #{$info-xs} {
+    padding: $base-padding-xs 0;
+  }
+
   border-top: 4px double $color;
   border-bottom: 4px double $color;
 
@@ -7,12 +12,17 @@
 
   .sub-promotion {
     font-size: 3rem;
+
     color: $color;
     text-align: center;
     h2 {
       font-size: 1.5rem;
       margin-top: 15px;
       text-transform: uppercase;
+
+      @media #{$info-xs} {
+        font-size: 1rem;
+      }
     }
   }
 }

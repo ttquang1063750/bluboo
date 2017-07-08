@@ -2,6 +2,12 @@
 -------------------------------------------------------------- */
 footer {
   padding-top: $base-padding;
+
+
+  @media #{$info-xs} {
+    padding-top: $base-padding-xs;
+  }
+
   border-top: 1px solid $color;
 
   a{
