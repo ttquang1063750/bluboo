@@ -10,15 +10,16 @@ $font-heading: Helvetica,Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-ser
 
 /* Colors */
 $white: rgb(255, 255, 255);
+$product-colors: #f3dfc7, #6f6f6f, #ffb9b9;
 //$color: #2caefa;
 $color: #898f4b;
-$price: #d0021b;
+$price: #CC3300;
+$border-color: #2caefa;
 
 $color-hover: #898f4b;
-$background-color: #898f4b;
-$background-hover-color: #898f4b;
-$border-color: #898f4b;
-$border-hover-color: #898f4b;
+$background-color: #2caefa;
+$background-hover-color: lighten($border-color, 0.8);
+$border-hover-color: lighten($border-color, 0.8);
 
 $dark-grey: rgb(80, 80, 80);
 $text-grey: rgb(100, 100, 100);

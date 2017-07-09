@@ -159,12 +159,14 @@
         và <a ui-sref="app.home">Hướng dẫn sử dụng Sản phẩm</a>
       </p>
       <form>
-        <div class="form-group">
-          <input type="email" placeholder="Email">
-        </div>
-        <div class="form-group">
-          <input type="tel" placeholder="Số ĐT">
-        </div>
+        <label class="has-float-label">
+          <input type="email" placeholder="email@example.com"/>
+          <span>Email</span>
+        </label>
+        <label class="has-float-label">
+          <input type="tel" placeholder="Số điện thoại"/>
+          <span>ĐT</span>
+        </label>
 
         <button class="btn btn-default">Gửi</button>
       </form>
@@ -276,9 +278,18 @@
                     <div class="choose-color">
                       <h3 class=" wow fadeInUp" data-wow-delay=".1s">
                         chọn màu:
-                        <span class="color selected color-1 wow fadeInUp" data-wow-delay=".1s"></span>
-                        <span class="color color-2 wow fadeInUp" data-wow-delay=".1s"></span>
-                        <span class="color color-3 wow fadeInUp" data-wow-delay=".1s"></span>
+                        <span class="color wow fadeInUp" data-wow-delay=".1s">
+                          <input type="radio" id="product1" name="product-color"  checked="checked" />
+                          <label for="product1"><span class='color-1'></span></label>
+                        </span>
+                        <span class="color wow fadeInUp" data-wow-delay=".1s">
+                          <input type="radio" id="product2" name="product-color"/>
+                          <label for="product2"><span class='color-2'></span></label>
+                        </span>
+                        <span class="color wow fadeInUp" data-wow-delay=".1s">
+                          <input type="radio" id="product3" name="product-color"/>
+                          <label for="product3"><span class='color-3'></span></label>
+                        </span>
                       </h3>
                     </div>
 
@@ -521,15 +532,18 @@
                       <i class="icon-star-empty" aria-hidden="true"></i>
                     </span>
                   </p>
-                  <div class="form-group">
-                    <label>2. Tiêu đề của bạn</label>
-                    <input type="text" placeholder="Tiêu đề" class="form-control">
-                  </div>
 
-                  <div class="form-group">
+                  <label class="has-float-label">
+                    <input type="text" placeholder="Tiêu đề">
+                    <label>2. Tiêu đề của bạn</label>
+                  </label>
+
+
+                  <label class="has-float-label">
+                    <textarea type="text" placeholder="đánh giá của bạn"></textarea>
                     <label>3. Viết đánh giá của bạn vào bên dưới</label>
-                    <textarea type="text" placeholder="đánh giá của bạn" class="form-control" rows="4"></textarea>
-                  </div>
+                  </label>
+
                   <div class="form-group">
                     <button class="btn btn-default col-xs-2">Gửi</button>
                   </div>

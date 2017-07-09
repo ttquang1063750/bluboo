@@ -1,0 +1,50 @@
+input[type="radio"] {
+  display:none;
+}
+input[type="radio"] + label {
+  color: $color;
+  font-family:Arial, sans-serif;
+  font-size:14px;
+}
+input[type="radio"] + label span {
+  display:inline-block;
+  width:30px;
+  height:30px;
+  margin:-10px 5px 0 0;
+  vertical-align:middle;
+  cursor:pointer;
+  -moz-border-radius:  50%;
+  border-radius:  50%;
+}
+
+input[type="radio"] + label span {
+  background-color: $background-color;
+
+  &:hover {
+    border: 2px solid $border-hover-color;
+  }
+
+  &.color-1 {
+    background-color: nth($product-colors, 1);
+  }
+
+  &.color-2 {
+    background-color: nth($product-colors, 2);
+  }
+
+  &.color-3 {
+    background-color: nth($product-colors, 3);
+  }
+}
+
+input[type="radio"]:checked + label span{
+  border: 2px solid $border-color;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+  -webkit-transition:background-color 0.4s linear;
+  -o-transition:background-color 0.4s linear;
+  -moz-transition:background-color 0.4s linear;
+  transition:background-color 0.4s linear;
+}
