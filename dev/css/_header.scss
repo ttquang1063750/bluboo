@@ -129,14 +129,14 @@
         }
 
         .slider-productions-item{
+          display: inline-block;
+
           @media #{$info-xs} {
             border-top: 1px solid $color;
             a {
               border: none;
             }
           }
-
-
         }
       }
     }

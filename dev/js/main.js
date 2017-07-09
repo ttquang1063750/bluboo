@@ -1,14 +1,16 @@
-window.onload = function () {
+$(function () {
 
+  var _btnMenu = $('#btn-menu'),
+      _navigation = $("#navigation"),
+      _sliderProducts = $('.slider-productions'),
+      _refreshSlider = false;
+
+
+  //Init wowjs
   new WOW().init();
 
-  var $btnMenu = $('#btn-menu');
-  var $navigation = $("#navigation");
-  var $sliderProducts = $('.slider-productions');
-  var refreshSlider = false;
-
   //Set slider for products
-  $sliderProducts
+  _sliderProducts
       .slick({
         infinite: false,
         slidesToShow: 4,
@@ -31,27 +33,31 @@ window.onload = function () {
         ]
       })
       .on("breakpoint", function () {
-        $navigation.removeAttr("style");
-        refreshSlider = false;
+        _navigation.removeAttr("style");
+        _refreshSlider = false;
       });
 
 
-  $btnMenu.click(function (event) {
+  _btnMenu.click(function (event) {
     event.stopPropagation();
 
-    $navigation.slideToggle(function () {
-      if(!refreshSlider){
-        $sliderProducts.slick('setPosition');
-        refreshSlider = true;
+    _navigation.slideToggle(function () {
+      if(!_refreshSlider){
+        _sliderProducts.slick('setPosition');
+        _refreshSlider = true;
       }
     });
   });
-  $navigation.on("click", function (event) {
+
+  _navigation.on("click", function (event) {
     event.stopPropagation();
   });
 
   $(document).on("click", function () {
-    $navigation.hide();
+    //Only hide when screen equal smart phone size
+    if(_btnMenu.is(":visible")){
+      _navigation.hide();
+    }
   });
 
 
@@ -164,4 +170,4 @@ window.onload = function () {
           }
         }
       });
-}
+});
